@@ -1,403 +1,382 @@
-# WordPress Blank Pot
-# Copyright (C) 2014 ...
-# This file is distributed under the GNU General Public License v2 or later.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: WordPress Team Manager v1.6.0\n"
-"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-02-05 17:39+0600\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Your Name <you@example.com>\n"
-"Language-Team: Your Team <translations@example.com>\n"
-"Language: en\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: BUG-EMAIL-ADDR <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: yyyy-mm-dd hh:mm+0000\n"
+"PO-Revision-Date: 2016-06-26 01:57+0600\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
-"X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
-"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
-"X-Poedit-Basepath: ../\n"
-"X-Generator: Poedit 1.7.4\n"
-"X-Poedit-SearchPath-0: .\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Eazy Po 0.9.5.3\n"
 
-#: inc/customposttype.php:9 inc/customposttype.php:20
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:67
+#: admin/class-wp-team-manager-admin.php:78
 msgid "Team"
 msgstr ""
 
-#: inc/customposttype.php:10
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:68
 msgid "Team Member"
 msgstr ""
 
-#: inc/customposttype.php:11
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:69
 msgid "Add New Member"
 msgstr ""
 
-#: inc/customposttype.php:12
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:70
 msgid "Add New "
 msgstr ""
 
-#: inc/customposttype.php:13
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:71
 msgid "Edit Team Member "
 msgstr ""
 
-#: inc/customposttype.php:14
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:72
 msgid "New Team Member"
 msgstr ""
 
-#: inc/customposttype.php:15
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:73
 msgid "View Team Member"
 msgstr ""
 
-#: inc/customposttype.php:16
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:74
 msgid "Search Team Members"
 msgstr ""
 
-#: inc/customposttype.php:17
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:75
 msgid "Not found any Team Member"
 msgstr ""
 
-#: inc/customposttype.php:18
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:76
 msgid "No Team Member found in Trash"
 msgstr ""
 
-#: inc/customposttype.php:19
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:77
 msgid "Parent Team Member:"
 msgstr ""
 
-#: inc/customposttype.php:48
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:106
 msgid "Groups"
 msgstr ""
 
-#: inc/customposttype.php:49
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:107
 msgid "Group"
 msgstr ""
 
-#: inc/customposttype.php:50
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:108
 msgid "Search Groups"
 msgstr ""
 
-#: inc/customposttype.php:51
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:109
 msgid "Popular Groups"
 msgstr ""
 
-#: inc/customposttype.php:52
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:110
 msgid "All Groups"
 msgstr ""
 
-#: inc/customposttype.php:55
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:113
 msgid "Edit Group"
 msgstr ""
 
-#: inc/customposttype.php:56
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:114
 msgid "Update Group"
 msgstr ""
 
-#: inc/customposttype.php:57
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:115
 msgid "Add New Group"
 msgstr ""
 
-#: inc/customposttype.php:58
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:116
 msgid "New Group Name"
 msgstr ""
 
-#: inc/customposttype.php:59
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:117
 msgid "Separate Groups with commas"
 msgstr ""
 
-#: inc/customposttype.php:60
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:118
 msgid "Add or remove Groups"
 msgstr ""
 
-#: inc/customposttype.php:61
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:119
 msgid "Choose from the most used Groups"
 msgstr ""
 
-#: inc/customposttype.php:62
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:120
 msgid "No Groups found."
 msgstr ""
 
-#: inc/customposttype.php:63
-msgctxt "wp-team-manager"
+#: admin/class-wp-team-manager-admin.php:121
 msgid "Team Groups"
 msgstr ""
 
-#: inc/customposttype.php:98
+#: admin/class-wp-team-manager-admin.php:152
 msgid "Team Member Information"
 msgstr ""
 
-#: inc/customposttype.php:106
+#: admin/class-wp-team-manager-admin.php:160
 msgid "Job Title"
 msgstr ""
 
-#: inc/customposttype.php:107
+#: admin/class-wp-team-manager-admin.php:161
 msgid "Job title of this team member."
 msgstr ""
 
-#: inc/customposttype.php:113
+#: admin/class-wp-team-manager-admin.php:167
 msgid "Telephone"
 msgstr ""
 
-#: inc/customposttype.php:114
+#: admin/class-wp-team-manager-admin.php:168
 msgid "Telephone no of this team member."
 msgstr ""
 
-#: inc/customposttype.php:120
+#: admin/class-wp-team-manager-admin.php:174
 msgid "Location"
 msgstr ""
 
-#: inc/customposttype.php:121
+#: admin/class-wp-team-manager-admin.php:175
 msgid "Location of this team member."
 msgstr ""
 
-#: inc/customposttype.php:127
+#: admin/class-wp-team-manager-admin.php:181
 msgid "Web URL"
 msgstr ""
 
-#: inc/customposttype.php:128
+#: admin/class-wp-team-manager-admin.php:182
 msgid "Website url of this team member."
 msgstr ""
 
-#: inc/customposttype.php:134
+#: admin/class-wp-team-manager-admin.php:188
 msgid "VCARD"
 msgstr ""
 
-#: inc/customposttype.php:135
+#: admin/class-wp-team-manager-admin.php:189
 msgid "Upload your VCARD"
 msgstr ""
 
-#: inc/customposttype.php:145
+#: admin/class-wp-team-manager-admin.php:199
 msgid "Social Profile"
 msgstr ""
 
-#: inc/customposttype.php:153
+#: admin/class-wp-team-manager-admin.php:207
 msgid "Facebook"
 msgstr ""
 
-#: inc/customposttype.php:154
+#: admin/class-wp-team-manager-admin.php:208
 msgid "Facebook profile or page link."
 msgstr ""
 
-#: inc/customposttype.php:160
+#: admin/class-wp-team-manager-admin.php:214
 msgid "Twitter"
 msgstr ""
 
-#: inc/customposttype.php:161
+#: admin/class-wp-team-manager-admin.php:215
 msgid "Twitter profile link."
 msgstr ""
 
-#: inc/customposttype.php:167
+#: admin/class-wp-team-manager-admin.php:221
 msgid "LinkedIn"
 msgstr ""
 
-#: inc/customposttype.php:168
+#: admin/class-wp-team-manager-admin.php:222
 msgid "LinkedIn profile link."
 msgstr ""
 
-#: inc/customposttype.php:174
+#: admin/class-wp-team-manager-admin.php:228
 msgid "Google Plus"
 msgstr ""
 
-#: inc/customposttype.php:175
+#: admin/class-wp-team-manager-admin.php:229
 msgid "Google Plus profile link."
 msgstr ""
 
-#: inc/customposttype.php:181
+#: admin/class-wp-team-manager-admin.php:235
+msgid "Instagram"
+msgstr ""
+
+#: admin/class-wp-team-manager-admin.php:236
+msgid "Instagram link."
+msgstr ""
+
+#: admin/class-wp-team-manager-admin.php:242
 msgid "Dribbble"
 msgstr ""
 
-#: inc/customposttype.php:182
+#: admin/class-wp-team-manager-admin.php:243
 msgid "Dribbble profile link."
 msgstr ""
 
-#: inc/customposttype.php:188
+#: admin/class-wp-team-manager-admin.php:249
 msgid "Youtube"
 msgstr ""
 
-#: inc/customposttype.php:189
+#: admin/class-wp-team-manager-admin.php:250
 msgid "Youtube profile link."
 msgstr ""
 
-#: inc/customposttype.php:195
+#: admin/class-wp-team-manager-admin.php:256
 msgid "Vimeo"
 msgstr ""
 
-#: inc/customposttype.php:196
+#: admin/class-wp-team-manager-admin.php:257
 msgid "Vimeo profile link."
 msgstr ""
 
-#: inc/customposttype.php:202
+#: admin/class-wp-team-manager-admin.php:263
 msgid "Email"
 msgstr ""
 
-#: inc/customposttype.php:203
+#: admin/class-wp-team-manager-admin.php:264
 msgid "Email Id"
 msgstr ""
 
-#: meta-box.php:20
+#: admin/class-wp-team-manager-admin.php:287
 msgid "You don't have permission to delete this file."
 msgstr ""
 
-#: meta-box.php:24
+#: admin/class-wp-team-manager-admin.php:291
 msgid "File has been successfully deleted."
 msgstr ""
 
-#: meta-box.php:341
-msgid "Uploaded files"
+#: admin/class-wp-team-manager-admin.php:342
+msgid "Featured Image"
 msgstr ""
 
-#: meta-box.php:355
-msgid "Upload new files"
+#: admin/class-wp-team-manager-admin.php:371
+msgid "ID"
 msgstr ""
 
-#: meta-box.php:385
-msgid "Uploaded images"
-msgstr ""
-
-#: meta-box.php:399
-msgid "Upload new images"
-msgstr ""
-
-#: meta-box.php:402
-msgid "Add more image"
-msgstr ""
-
-#: meta-box.php:411
-msgid "Select a color"
-msgstr ""
-
-#: settings.php:67
+#: includes/class-wp-team-manager-setting-page.php:57
 msgid "Team Manager settings"
 msgstr ""
 
-#: settings.php:96
+#: includes/class-wp-team-manager-setting-page.php:88
 msgid "Social icon size"
 msgstr ""
 
-#: settings.php:105
-msgid "Open links on new window"
+#: includes/class-wp-team-manager-setting-page.php:97
+msgid "Open social links on new window"
 msgstr ""
 
-#: settings.php:114
+#: includes/class-wp-team-manager-setting-page.php:104
+msgid "Disable single team member view"
+msgstr ""
+
+#: includes/class-wp-team-manager-setting-page.php:114
 msgid "HTML Template"
 msgstr ""
 
-#: settings.php:115
+#: includes/class-wp-team-manager-setting-page.php:115
 msgid "Edit the HTML template if you want to customize it."
 msgstr ""
 
-#: settings.php:116
+#: includes/class-wp-team-manager-setting-page.php:116
 msgid "Here is the list of available tags."
 msgstr ""
 
-#: settings.php:117
+#: includes/class-wp-team-manager-setting-page.php:117
 msgid ""
 "<code>%title%</code> , <code>%content%</code> , <code>%image%</code>, <code>"
 "%sociallinks%</code>, <code>%jobtitle%</code>, <code>%%otherinfo%%</code>"
 msgstr ""
 
-#: settings.php:121
+#: includes/class-wp-team-manager-setting-page.php:121
 msgid "CSS"
 msgstr ""
 
-#: settings.php:122
+#: includes/class-wp-team-manager-setting-page.php:122
 msgid "Add custom CSS for Team Manager"
 msgstr ""
 
-#: settings.php:131
-msgid "Support & bug report"
-msgstr ""
-
-#: settings.php:132
-#, php-format
-msgid ""
-"If you have some idea to improve this plugin or any bug to report, please "
-"email me at : <a href=\"%1$s\">%2$s</a>"
-msgstr ""
-
-#: settings.php:133
-#, php-format
-msgid ""
-"You like this plugin ? Then please provide some support by <a href=\"%1$s\" "
-"target=\"_blank\">voting for it</a> and/or says that <a href=\"%2$s\" target="
-"\"_blank\">it works</a> for your WordPress installation on the official "
-"WordPress plugins repository."
-msgstr ""
-
-#: shortcode-generator.php:31
+#: includes/class-wp-team-manager-setting-page.php:139
 msgid "Shortcode Generator"
 msgstr ""
 
-#: shortcode-generator.php:34
+#: includes/class-wp-team-manager-setting-page.php:142
 msgid "Select Team Group:"
 msgstr ""
 
-#: shortcode-generator.php:54
+#: includes/class-wp-team-manager-setting-page.php:162
 msgid "Order By:"
 msgstr ""
 
-#: shortcode-generator.php:64
+#: includes/class-wp-team-manager-setting-page.php:172
 msgid "Number of entries to display:"
 msgstr ""
 
-#: shortcode-generator.php:68
+#: includes/class-wp-team-manager-setting-page.php:176
 msgid "Select template:"
 msgstr ""
 
-#: shortcode-generator.php:75
+#: includes/class-wp-team-manager-setting-page.php:183
 msgid "Select image style:"
 msgstr ""
 
-#: shortcode-generator.php:83
+#: includes/class-wp-team-manager-setting-page.php:191
 msgid "Select image size:"
 msgstr ""
 
-#: shortcode-generator.php:276
+#: includes/class-wp-team-manager-wtm-meta-box.php:327
+msgid "Uploaded files"
+msgstr ""
+
+#: includes/class-wp-team-manager-wtm-meta-box.php:341
+msgid "Upload new files"
+msgstr ""
+
+#: includes/class-wp-team-manager-wtm-meta-box.php:371
+msgid "Uploaded images"
+msgstr ""
+
+#: includes/class-wp-team-manager-wtm-meta-box.php:385
+msgid "Upload new images"
+msgstr ""
+
+#: includes/class-wp-team-manager-wtm-meta-box.php:388
+msgid "Add more image"
+msgstr ""
+
+#: includes/class-wp-team-manager-wtm-meta-box.php:397
+msgid "Select a color"
+msgstr ""
+
+#: public/class-wp-team-manager-public.php:270
+#: public/templates/single-team_manager.php:91
 msgid "Tel:"
 msgstr ""
 
-#: shortcode-generator.php:279
+#: public/class-wp-team-manager-public.php:273
+#: public/templates/single-team_manager.php:94
 msgid "Location:"
 msgstr ""
 
-#: shortcode-generator.php:282
+#: public/class-wp-team-manager-public.php:276
+#: public/templates/single-team_manager.php:97
 msgid "Website:"
 msgstr ""
 
-#: shortcode-generator.php:285
+#: public/class-wp-team-manager-public.php:279
+#: public/templates/single-team_manager.php:100
 msgid "Vcard:"
 msgstr ""
 
-#: wp-team-manager.php:99
-msgid "Featured Image"
+#: public/templates/single-team_manager.php:123
+msgid "Pages:"
 msgstr ""
 
-#: wp-team-manager.php:130
-msgid "ID"
+#: public/templates/single-team_manager.php:127
+msgid "Page"
+msgstr ""
+
+#: public/templates/single-team_manager.php:133
+msgid "Edit"
 msgstr ""

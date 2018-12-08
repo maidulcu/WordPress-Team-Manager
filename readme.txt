@@ -1,10 +1,10 @@
 === WordPress Team Manager ===
 Contributors: maidulcu
 Donate link: http://www.dynamicweblab.com/
-Tags: team manager, team management,teams,shortcode,member,vcard
+Tags: team manager, team management,teams,vcard,our team
 Requires at least: 3.5
-Tested up to: 4.2.3
-Stable tag: 4.2.3
+Tested up to: 4.9.8
+Stable tag: 4.9.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,7 +31,7 @@ Features:
 Contributors:
 [Mike Jordan](http://profiles.wordpress.org/thaicloud/)
 
-For help contact me on [Dynamicweblab.com](http://www.dynamicweblab.com/)
+For help contact us [Dynamicweblab.com](http://www.dynamicweblab.com/)
 
 == Installation ==
 
@@ -68,8 +68,8 @@ Copy single.php from wp-team-manager/templates to your-theme-folder/team_templat
 2. Add new group
 3. Shortcode Generator
 4. Settings page
-5. Grid view
-6. List view
+5. List view
+6. Grid view
 
 == Changelog ==
 
@@ -128,3 +128,23 @@ Copy single.php from wp-team-manager/templates to your-theme-folder/team_templat
 * Disable single team member view settings option
 * Add language support
 * Add telephone hyperlink
+
+= 1.6.2 =
+* Fix team member search white screen bug
+
+= 1.6.3 =
+* Make compatible up to wordpess 4.5
+* Fix translation bug
+
+= 1.6.4 =
+* Add Instagram
+* Update css for mobile devices
+* Fix some style issue
+* Fix translation bug
+
+= 1.6.5 =
+* Fix shortcode not working on text widget bug
+
+= 1.6.6 =
+* Update meta box class
+* Cleanup code and remove team icon
