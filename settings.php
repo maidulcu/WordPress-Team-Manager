@@ -120,13 +120,6 @@ function team_manager_setting_function() {
 
     </table>
 
-    <!-- Template -->
-    <h3 class="wptm_title"><?php _e('HTML Template', 'wp-team-manager'); ?></h3>
-    <p><?php _e('Edit the HTML template if you want to customize it.', 'wp-team-manager'); ?></p>
-    <p><?php _e('Here is the list of available tags.', 'wp-team-manager'); ?></p>
-    <p><?php _e('<code>%title%</code> , <code>%content%</code> , <code>%image%</code>, <code>%sociallinks%</code>, <code>%jobtitle%</code>, <code>%%otherinfo%%</code>', 'wp-team-manager'); ?></p>
-    <textarea name="tm_custom_template" id="tm_custom_template" class="wp-editor-area" rows="10" cols="80"><?php echo $tm_custom_template; ?></textarea>
-
     <!-- Custom CSS -->
     <h3 class="wptm_title"><?php _e('CSS', 'wp-team-manager'); ?></h3>
     <p><?php _e('Add custom CSS for Team Manager', 'wp-team-manager'); ?></p>
@@ -139,7 +132,7 @@ function team_manager_setting_function() {
     <!-- Support -->
     <div id="wptm_support">
         <h3><?php _e('Support & bug report', 'wp-team-manager'); ?></h3>
-        <p><?php printf(__('If you have some idea to improve this plugin or any bug to report, please email me at : <a href="%1$s">%2$s</a>', 'wp-team-manager'), 'mailto:info@dynamicweblab.com?subject=[wp-team-manager]', 'info@dynamicweblab.com'); ?></p>
+        <p><?php printf(__('If you have some idea to improve this plugin or any bug to report, please email me at : <a href="%1$s">%2$s</a>', 'wp-team-manager'), 'mailto:dynamicweblab@gmail.com?subject=[wp-team-manager] Bug', 'dynamicweblab@gmail.com'); ?></p>
         <p><?php printf(__('You like this plugin ? Then please provide some support by <a href="%1$s" target="_blank">voting for it</a> and/or says that <a href="%2$s" target="_blank">it works</a> for your WordPress installation on the official WordPress plugins repository.', 'wp-team-manager'), 'http://wordpress.org/plugins/wp-team-manager/', 'http://wordpress.org/plugins/wp-team-manager/'); ?></p>
     </div>
 

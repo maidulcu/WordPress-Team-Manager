@@ -69,6 +69,7 @@ function team_manager_submenu_page_callback() {
                 <select id="tm_layout" name="tm_layout">
                   <option value="grid">Grid</option>
                   <option value="list">List</option>
+                  <option value="grid-light-box">Grid Light Box</option>
                 </select>
               </p>
              <p>
@@ -107,32 +108,11 @@ function team_manager_submenu_page_callback() {
     $tm_link_new_window = get_option('tm_link_new_window');
     // get link new window settings
     $single_team_member_view = get_option('single_team_member_view');    
-    // get custom template
-    $tm_custom_template = get_option('tm_custom_template');
 
     //If there is no tm_social_size then load default
     if (!$social_size) {
       $social_size=16;
     }
-    
-    //If there is no tm_custom_template then load default
-
-    if (!$tm_custom_template) {
-
-      $tm_custom_template='<div class="%layout%">
-    <div class="team-member-info">
-    %image%
-     %sociallinks%
-    </div><div class="team-member-des">
-    <h2 class="team-title">%title%</h2>
-    <h4 class="team-position">%jobtitle%</h4>
-    %content%
-    %otherinfo%
-    </div>
-    </div>';
-      
-    }
-
     
     if($tm_link_new_window=='True'){
 		
@@ -309,14 +289,18 @@ function team_manager_submenu_page_callback() {
         $otherinfo .= '</ul>';
 
 
-
-
-        $find = array('/%layout%/i','/%title%/i', '/%content%/i', '/%image%/i','/%jobtitle%/i','/%otherinfo%/i','/%sociallinks%/i');
-        
-        $replace = array($layout,$title, $content,$image,$job_title,$otherinfo,$sociallinks);
-        
-        $output .= preg_replace($find, $replace, $tm_custom_template);
-
+        $output .= '<div class="%layout%">';
+        $output .= '<div class="team-member-info">';
+        $output .= $image;
+        $output .= $sociallinks;
+        $output .= '</div>';
+        $output .= '<div class="team-member-des">';
+        $output .= '<h2 class="team-title">'.$title.'</h2>';
+        $output .= '<h4 class="team-position">'.$job_title.'</h4>';
+        $output .= $content;
+        $output .= $otherinfo;
+        $output .= '</div>';
+        $output .= '</div>';
       }
         $output .= '</div>';
 
@@ -328,5 +312,5 @@ function team_manager_submenu_page_callback() {
 
     return $output;
   }
-  add_shortcode( 'team_manager', 'team_manager_fn' );
+  //add_shortcode( 'team_manager', 'team_manager_fn' );
 ?>

@@ -181,3 +181,69 @@ padding: 0px;
 text-align: left;
 }
 .single-team_manager .attachment-post-thumbnail{margin: 1% 10% 1% 10%;}
+
+
+
+/* Unitek layout */
+.team-list>.unitek {
+	width: 100%;
+	float: left;
+	list-style: none;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	margin-left: 0px;
+	/*--*/
+	background-color: #D7E1E5;
+}
+
+.unitek-team-member-info {
+	float: left;
+	width: 30%;
+	margin-right: 2.5%;
+	text-align: center;
+	}
+
+
+
+.overlay-container {
+	position: relative;
+	width: 100%;
+  }
+  
+  .image {
+	display: block;
+	width: 100%;
+	height: auto;
+  }
+
+
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	/* background-color: #416D89; */
+  }
+
+.overlay-container:hover .overlay {
+	opacity: 1;
+  }
+
+.text {
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	text-align: center;
+  }
+
