@@ -1,142 +1,89 @@
 <?php
+use DWL\Wtm\Classes\Helper;
+
 /**
- * The template for displaying team single post
- *
+ * The template for displaying a single Team Manager
  */
 
-get_header(); ?>
+get_header();
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+/**
+ * Enqueue scripts and styles for the Single Team Member page if Lightbox is enabled
+ */
+if (get_option('tm_single_team_lightbox') === 'True' && function_exists('tmwstm_fs') && tmwstm_fs()->is_paying_or_trial()) {
+    wp_enqueue_script('wp-team-magnific-popup');
+    wp_enqueue_script('wp-team-pro');
+    wp_enqueue_style('wp-team-magnific-popup');
+}
 
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
+$tm_single_fields = (array) get_option('tm_single_fields', []); // Use default value directly
 
+?>
 
-        $post_id = get_the_ID();
+<div id="primary" class="content-area dwl-team-wrapper dwl-team-single wtm-container single-style">
+    <div id="main" class="wtm-row site-main" role="main">
+        <article id="post-<?php the_ID(); ?>" <?php post_class('wtm-col-12'); ?>>
+            <?php while (have_posts()) : the_post();
+                $post_id   = absint(get_the_ID()); // Ensure post ID is an integer
+                $job_title = esc_html(get_post_meta($post_id, 'tm_jtitle', true)); // Escape early
+                $short_bio = wp_kses_post(get_post_meta($post_id, 'tm_short_bio', true)); 
+                $long_bio = Helper::get_wysiwyg_output('tm_long_bio', $post_id);
+            ?>
+                <div class="entry-content wtm-row">
+                    <div class="team-bio-image wtm-col-12 wtm-col-md-6">
+                        <?php 
+                        if (has_post_thumbnail()) {
+                            the_post_thumbnail(get_option('team_image_size_change', 'medium')); 
+                        }
+                        ?>
+                    </div>
 
-        // get social settings
-        $social_size = get_option('tm_social_size');
-        // get link new window settings
-        $tm_link_new_window = get_option('tm_link_new_window');
+                    <div class="wtm-col-12 wtm-col-md-6">
+                        <?php the_title('<h2 class="single-team-member-title">', '</h2>'); ?>
 
-        $tm_custom_template = get_option('tm_custom_template');
+                        <?php if (!empty($job_title) && !in_array('tm_jtitle', $tm_single_fields)) : ?>
+                            <h3 class="team-position my-0"><?php echo $job_title; ?></h3>
+                        <?php endif; ?>
 
-        //If there is no tm_social_size then load default
-        if (!$social_size) {
-          $social_size=16;
-        }
+                        <?php if (!empty($short_bio)) : ?>
+                            <div class="team-short-bio">
+                                <?php echo $short_bio; ?>
+                            </div>
+                        <?php endif; ?>
 
-        if($tm_link_new_window=='True'){
-        
-          $link_window = 'target="_blank"';
-        
-        }else{
-          
-          $link_window = '';
-          
-        }
+                        <?php if (tmwstm_fs()->is_paying_or_trial()): ?>
+                                <div class="wtm-progress-bar">
+                                <?php
+                                        if (class_exists('DWL_Wtm_Pro_Helper')) {
 
-        $job_title = get_post_meta($post_id,'tm_jtitle',true);
-        $telephone = get_post_meta($post_id,'tm_telephone',true);
-        $location = get_post_meta($post_id,'tm_location',true);
-        $web_url = get_post_meta($post_id,'tm_web_url',true);
-        $vcard = get_post_meta($post_id,'tm_vcard',true);
-        $facebook = get_post_meta($post_id,'tm_flink',true);
-        $twitter = get_post_meta($post_id,'tm_tlink',true);
-        $linkedIn = get_post_meta($post_id,'tm_llink',true);
-        $googleplus = get_post_meta($post_id,'tm_gplink',true);
-        $dribbble = get_post_meta($post_id,'tm_dribbble',true);
-        $youtube = get_post_meta($post_id,'tm_ylink',true);
-        $vimeo = get_post_meta($post_id,'tm_vlink',true);
-        $instagram = get_post_meta($post_id,'tm_instagram',true);
-        $emailid = get_post_meta($post_id,'tm_emailid',true);
-          
+                                            echo DWL_Wtm_Pro_Helper::display_skills_output($team_member->ID);
 
-        $sociallinks = '<ul class="team-member-socials size-'.$social_size.'">';
-        if (!empty($facebook)) {
-          $sociallinks .= '<li><a class="facebook-'.$social_size.'" href="' . $facebook. '" '.$link_window.' title="Facebook">Facebook</a></li>';
-        }
-        if (!empty($twitter)) {
-          $sociallinks .= '<li><a class="twitter-'.$social_size.'" href="' . $twitter. '" '.$link_window.' title="Twitter">Twitter</a></li>';
-        }
-        if (!empty($linkedIn)) {
-          $sociallinks .= '<li><a class="linkedIn-'.$social_size.'" href="' . $linkedIn. '" '.$link_window.' title="LinkedIn">LinkedIn</a></li>';
-        }
-        if (!empty($googleplus)) {
-          $sociallinks .= '<li><a class="googleplus-'.$social_size.'" href="' . $googleplus. '" '.$link_window.' title="Google Plus">Google Plus</a></li>';
-        }
-        if (!empty($instagram)) {
-          $sociallinks .= '<li><a class="instagram-'.$social_size.'" href="' . $instagram. '" '.$link_window.' title="Instagram">Instagram</a></li>';
-        }        
-        if (!empty($dribbble)) {
-          $sociallinks .= '<li><a class="dribbble-'.$social_size.'" href="' . $dribbble. '" '.$link_window.' title="Dribbble">Dribbble</a></li>';
-        }        
-        if (!empty($youtube)) {
-          $sociallinks .= '<li><a class="youtube-'.$social_size.'" href="' . $youtube. '" '.$link_window.' title="Youtube">Youtube</a></li>';
-        }
-        if (!empty($vimeo)) {
-          $sociallinks .= '<li><a class="vimeo-'.$social_size.'" href="' . $vimeo. '" '.$link_window.' title="Vimeo">Vimeo</a></li>';
-        }
-        if (!empty($emailid)) {
-          $sociallinks .= '<li><a class="emailid-'.$social_size.'" href="mailto:' . $emailid. '" title="Email">Email</a></li>';
-        }                                                        
-        $sociallinks .= '</ul>';
+                                        } ?>
+                                </div>
+                        <?php endif; ?>
 
+                        <?php 
+                        echo wp_kses_post(Helper::get_team_other_infos($post_id));
+                        echo wp_kses_post(Helper::display_social_profile_output($post_id));
+                        ?>
+                    </div>
 
-        $otherinfo = '<ul class="team-member-other-info">';
-        if (!empty($telephone)) {
-          $otherinfo .= '<li><span> '.__('Tel:','wp-team-manager').' </span><a href="tel://'.$telephone.'">'.$telephone.'</a></li>';
-        }
-        if (!empty($location)) {
-          $otherinfo .= '<li><span> '.__('Location:','wp-team-manager').' </span>'.$location.'</li>';
-        }
-        if (!empty($web_url)) {
-          $otherinfo .= '<li><span> '.__('Website:','wp-team-manager').' </span><a href="'.$web_url.'" target="_blank">Link</a></li>';
-        }
-        if (!empty($vcard)) {
-          $otherinfo .= '<li><span> '.__('Vcard:','wp-team-manager').' </span><a href="'.$vcard.'" >Download</a></li>';
-        }                                               
-        $otherinfo .= '</ul>';
-        ?>
+                    <?php if (!empty($long_bio)) : ?>
+                        <div class="wtm-col-12 py-md-3 wp-team-manager-long-bio">
+                            <?php echo $long_bio; ?>
+                        </div>
+                    <?php endif; ?>
 
+                    <div class="wtm-col-12 py-md-3">
+                        <?php the_content(); ?>
+                    </div>
 
-    <?php
-    // check if the post has a Post Thumbnail assigned to it.
-    if ( has_post_thumbnail() ) {
-      the_post_thumbnail();
-    } 
-    ?>
+                    <?php echo wp_kses_post(Helper::get_image_gallery_output($post_id)); ?>
 
-    <header class="entry-header">
-      <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-    </header><!-- .entry-header -->
-
-    <div class="entry-content">
-      <?php the_content(); ?>
-      <?php echo $sociallinks; ?>
-      <?php echo $otherinfo; ?>
-      <?php
-        wp_link_pages( array(
-          'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentyfifteen' ) . '</span>',
-          'after'       => '</div>',
-          'link_before' => '<span>',
-          'link_after'  => '</span>',
-          'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>%',
-          'separator'   => '<span class="screen-reader-text">, </span>',
-        ) );
-      ?>
-    </div><!-- .entry-content -->
-
-      <?php edit_post_link( __( 'Edit', 'twentyfifteen' ), '<footer class="entry-footer"><span class="edit-link">', '</span></footer><!-- .entry-footer -->' ); ?>
-
-      <?php // End the loop.
-      endwhile;
-      ?>
-     </article><!-- #post-## -->
-		</main><!-- .site-main -->
-	</div><!-- .content-area -->
+                </div>
+            <?php endwhile; ?>
+        </article>
+    </div>
+</div>
 
 <?php get_footer(); ?>
